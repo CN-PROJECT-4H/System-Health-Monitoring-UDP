@@ -19,7 +19,7 @@ def compute_shared_key(peer_public, private_key):
 
 
 def create_hmac(key, message):
-    return hmac.new(key, message, hashlib.sha256).digest()
+    return hmac.new(key, message, digestmod=hashlib.sha256).digest()
 
 
 def verify_hmac(key, message, received_hmac):
